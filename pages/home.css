@@ -1,0 +1,195 @@
+/* css/pages/home.css - Стили для главной страницы (index.html) */
+
+/* ====================================
+   Стили для секции баннера (.banner)
+   ==================================== */
+   .banner {
+    margin-bottom: 30px;
+    text-align: center; /* Выравнивание баннера по центру (если нужно) */
+}
+
+.banner img {
+    max-width: 100%; /* Адаптивность баннера по ширине */
+    height: auto;
+    border-radius: 10px; /* Скругление углов баннера */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легкая тень для баннера */
+}
+
+/* ====================================
+   Стили для секции "Популярные товары" (.featured-products)
+   ==================================== */
+.featured-products {
+    margin-bottom: 40px;
+}
+
+.featured-products h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: center; /* Заголовок по центру */
+    color: #333;
+}
+
+.featured-products .product-list {
+    display: flex;          /* Flexbox для карточек товаров */
+    flex-wrap: wrap;        /* Перенос карточек на новую строку при необходимости */
+    justify-content: center; /* Выравнивание карточек по центру в строке */
+    gap: 25px;             /* Расстояние между карточками */
+}
+
+.featured-products .product-card {
+    width: 300px;          /* Фиксированная ширина карточки товара */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;       /* Обрезать содержимое, выходящее за границы borderRadius */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Тень для карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные эффекты при наведении */
+}
+
+.featured-products .product-card:hover {
+    transform: translateY(-5px); /* Сдвиг карточки вверх при наведении */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Усиление тени при наведении */
+}
+
+.featured-products .product-card a {
+    display: block;         /* Ссылка на всю область карточки */
+    text-decoration: none; /* Убрать подчеркивание у ссылки */
+    color: inherit;         /* Наследовать цвет текста от родителя */
+}
+
+.featured-products .product-card img {
+    display: block;         /* Изображение как блочный элемент, чтобы занимало всю ширину */
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Скругление верхних углов изображения */
+}
+
+.featured-products .product-card h3 {
+    font-size: 1.2em;
+    margin: 15px 20px 10px 20px; /* Отступы для заголовка товара */
+    color: #333;
+}
+
+.featured-products .product-card .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e44d26;         /* Пример акцентного цвета для цены */
+    margin: 0 20px 20px 20px; /* Отступы для цены */
+}
+
+
+/* ====================================
+   Стили для секции "Категории товаров" (.product-categories)
+   ==================================== */
+.product-categories {
+    margin-bottom: 40px;
+}
+
+.product-categories h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.product-categories .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.product-categories .category-card {
+    width: 250px;          /* Меньшая ширина для карточек категорий */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-categories .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.product-categories .category-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-categories .category-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    opacity: 0.9;          /* Небольшая прозрачность для изображений категорий */
+    transition: opacity 0.3s ease; /* Плавное изменение прозрачности при наведении */
+}
+
+.product-categories .category-card:hover img {
+    opacity: 1;            /* Убрать прозрачность при наведении */
+}
+
+
+.product-categories .category-card h3 {
+    font-size: 1.1em;
+    margin: 20px;
+    text-align: center;     /* Название категории по центру карточки */
+    color: #333;
+}
+
+
+/* ====================================
+   Стили для секции "О нашем магазине" (.about-us-preview)
+   ==================================== */
+.about-us-preview {
+    margin-bottom: 60px; /* Больший отступ снизу для секции "О нас" */
+    padding: 30px;
+    background-color: #f8f8f8; /* Светло-серый фон для секции "О нас" */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;     /* Выравнивание содержимого по центру */
+}
+
+.about-us-preview h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.about-us-preview img {
+    max-width: 400px;      /* Ограничение ширины изображения "О нас" */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-us-preview p {
+    line-height: 1.6;       /* Увеличенный межстрочный интервал для текста */
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.about-us-preview .button {
+    /* Стили для кнопки "Узнать больше"  - используем общие стили .button из components/buttons.css */
+    /* Дополнительные стили для кнопки "Узнать больше" на главной странице (если нужно) */
+}
+
+
+/* ====================================
+   Общие стили для main на главной странице
+   ==================================== */
+main {
+    padding-top: 30px; /* Верхний отступ для main */
+    padding-bottom: 40px; /* Нижний отступ для main */
+}
+
+.container main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}

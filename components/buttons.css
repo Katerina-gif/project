@@ -1,0 +1,46 @@
+/* css/components/buttons.css */
+
+.button {
+    display: inline-block; /* Кнопка как строчно-блочный элемент */
+    padding: 12px 25px;
+    background-color: #ffcc00; /* Желтый цвет фона для кнопки */
+    color: #fff; /* Белый цвет текста кнопки */
+    text-decoration: none;
+    border-radius: 8px; /* Скругление углов кнопки */
+    font-size: 1em;
+    font-weight: bold;
+    border: none;       /* Убрать стандартную рамку кнопки */
+    cursor: pointer;     /* Курсор "рука" при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные эффекты при наведении */
+}
+
+.button:hover {
+    background-color: #ffdd33; /* Более светлый желтый цвет фона при наведении */
+    transform: scale(1.05);   /* Небольшое увеличение размера при наведении */
+}
+
+.button:active {
+    background-color: #f0bb00; /* Еще более темный желтый цвет при активном состоянии (нажатии) */
+    transform: scale(1.0);    /* Вернуть к исходному размеру при нажатии */
+}
+
+/* Варианты стилей кнопок (если нужны разные типы) */
+
+.button-primary {
+    background-color: #007bff; /* Пример синего цвета для основной кнопки */
+}
+
+.button-primary:hover {
+    background-color: #0095ff;
+}
+
+.button-secondary {
+    background-color: #6c757d; /* Пример серого цвета для вторичной кнопки */
+    color: #fff;
+}
+
+.button-secondary:hover {
+    background-color: #828d95;
+}
+
+/* ... и другие варианты кнопок по необходимости (button-danger, button-success и т.д.) */

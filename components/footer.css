@@ -1,0 +1,58 @@
+/* css/components/footer.css */
+
+footer {
+    background-color: #f0f0f0; /* Светло-серый фон для подвала */
+    padding: 30px 0;
+    margin-top: 50px; /* Отступ сверху от основного контента до подвала */
+    border-top: 1px solid #eee; /* Тонкая линия-разделитель сверху подвала */
+    color: #555; /* Серый цвет текста в подвале */
+    font-size: 0.9em; /* Меньший размер шрифта для подвала */
+}
+
+.footer-info {
+    max-width: 1200px; /* Пример максимальной ширины контейнера подвала */
+    margin: 0 auto;    /* Центрирование контейнера подвала по горизонтали */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;          /* Flexbox для колонок в подвале */
+    justify-content: space-between; /* Распределить колонки по ширине подвала */
+    flex-wrap: wrap;        /* Переносить колонки на новую строку на узких экранах */
+}
+
+.footer-info section {
+    margin-bottom: 20px;
+    flex-basis: 30%;      /* Приблизительная ширина каждой секции (контакты, график, копирайт) */
+    min-width: 250px;     /* Минимальная ширина секции */
+}
+
+.footer-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333; /* Темно-серый цвет заголовков секций подвала */
+    font-size: 1.1em;
+}
+
+.footer-info p {
+    margin: 0 0 10px 0;
+}
+
+.footer-info address {
+    font-style: normal; /* Убрать курсив для тега address */
+}
+
+.footer-info a {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении на ссылки в подвале */
+}
+
+.footer-info .copyright {
+    flex-basis: 100%;     /* Секция copyright на всю ширину подвала */
+    text-align: center;     /* Выравнивание текста по центру для copyright */
+    margin-top: 20px;      /* Отступ сверху от секций контактов и графика */
+    margin-bottom: 0;
+}

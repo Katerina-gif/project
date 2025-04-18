@@ -1,0 +1,68 @@
+/* css/components/header.css */
+
+header {
+    background-color: #f8f8f8; /* Светло-серый фон для шапки */
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; /* Тонкая линия-разделитель снизу шапки */
+}
+
+header .logo {
+    float: left; /* Логотип слева */
+}
+
+header .logo a {
+    display: block; /* Логотип-ссылка как блочный элемент */
+}
+
+header .logo img {
+    max-width: 150px; /* Максимальная ширина логотипа */
+    height: auto;
+}
+
+header nav {
+    float: right; /* Навигация справа */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Убрать маркеры списка */
+}
+
+header nav ul li {
+    display: inline-block; /* Пункты меню в строку */
+    margin-left: 20px;
+}
+
+header nav ul li:first-child {
+    margin-left: 0; /* Убрать отступ у первого пункта меню */
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333; /* Темно-серый цвет текста меню */
+    text-decoration: none;
+    border-radius: 5px; /* Скругление углов пунктов меню */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+header nav ul li a:hover {
+    background-color: #ddd; /* Цвет фона при наведении на пункт меню */
+}
+
+/* Стили для контейнера, чтобы шапка не занимала всю ширину экрана (если нужно) */
+.container header {
+    max-width: 1200px; /* Пример максимальной ширины контейнера */
+    margin: 0 auto;    /* Центрирование контейнера по горизонтали */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /* Чтобы padding не увеличивал общую ширину контейнера */
+}
+
+/* Очистка float для родительского элемента (header) после float: left и float: right */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,205 @@
+/* css/pages/catalog.css - Исправленные и улучшенные стили для страницы каталога (catalog.html) */
+
+/* ====================================
+   Общие стили для страницы каталога (.catalog-page) - БЕЗ ИЗМЕНЕНИЙ
+   ==================================== */
+   .catalog-page {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.container .catalog-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+
+/* ====================================
+   Стили для страницы каталога с боковой панелью (.catalog-page.with-sidebar) - НЕЗНАЧИТЕЛЬНЫЕ ИЗМЕНЕНИЯ
+   ==================================== */
+.catalog-page.with-sidebar {
+    display: flex; /* Flexbox для размещения боковой панели и контента рядом */
+    padding: 20px;
+}
+
+.catalog-page.with-sidebar .sidebar-navigation {
+    width: 250px; /* Ширина боковой панели */
+    margin-right: 30px; /* Отступ справа от боковой панели до контента */
+    padding: 20px;
+    background-color: #f0f0f0; /* Светло-серый фон для боковой панели */
+    border-radius: 8px;
+    position: sticky; /* Фиксируем боковую панель при прокрутке */
+    top: 20px; /* Отступ от верха экрана, когда панель становится фиксированной */
+    height: fit-content; /* Чтобы высота боковой панели подстраивалась под содержимое */
+}
+
+.catalog-page.with-sidebar .sidebar-navigation h3 {
+    margin-top: 0; /* Убрать верхний отступ у заголовка меню */
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.catalog-page.with-sidebar .category-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-page.with-sidebar .category-menu li {
+    margin-bottom: 10px;
+}
+
+.catalog-page.with-sidebar .category-menu li a {
+    display: block; /* Сделать ссылки блочными, чтобы занимали всю ширину li */
+    padding: 10px 15px;
+    background-color: #fff; /* Белый фон для пунктов меню */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.catalog-page.with-sidebar .category-menu li a:hover {
+    background-color: #eee; /* Цвет фона при наведении на пункт меню */
+}
+
+/* ====================================
+   НОВЫЕ СТИЛИ ДЛЯ ПОДМЕНЮ В БОКОВОЙ ПАНЕЛИ (.subcategory-menu)
+   ==================================== */
+.catalog-page.with-sidebar .subcategory-menu {
+    padding-left: 20px; /* Отступ слева для подменю - ОСТАВЛЯЕМ */
+    margin: 10px 0;     /* Отступы сверху и снизу подменю - ОСТАВЛЯЕМ */
+    border-left: 2px solid #ddd; /* Добавлена вертикальная линия слева от подменю для визуального отделения */
+}
+
+.catalog-page.with-sidebar .subcategory-menu li {
+    margin-bottom: 5px; /* Меньший отступ между пунктами подменю - ОСТАВЛЯЕМ */
+}
+
+.catalog-page.with-sidebar .subcategory-menu li a {
+    font-size: 0.95em; /* Чуть меньший размер шрифта для пунктов подменю - ОСТАВЛЯЕМ */
+    padding: 8px 12px; /* Немного уменьшены внутренние отступы для пунктов подменю */
+    background-color: #f8f8f8; /* Изменен цвет фона пунктов подменю на более светлый серый */
+    color: #555;         /* Изменен цвет текста пунктов подменю на более светлый серый */
+}
+
+.catalog-page.with-sidebar .subcategory-menu li a:hover {
+    background-color: #eee; /* Цвет фона при наведении на пункт подменю - ОСТАВЛЯЕМ */
+}
+
+
+.catalog-page.with-sidebar .catalog-content {
+    flex: 1; /* Занять все оставшееся пространство справа от боковой панели - БЕЗ ИЗМЕНЕНИЙ */
+}
+
+/* ====================================
+   Стили для баннера каталога (.catalog-banner) - БЕЗ ИЗМЕНЕНИЙ
+   ==================================== */
+.catalog-banner {
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative; /* Для позиционирования заголовка поверх изображения */
+}
+
+.catalog-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0.85; /* Небольшая прозрачность для баннера каталога */
+}
+
+.catalog-banner h1 {
+    position: absolute; /* Позиционируем заголовок поверх баннера */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование заголовка */
+    font-size: 2.5em;
+    color: #fff; /* Белый цвет текста заголовка */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста заголовка */
+}
+
+
+/* ====================================
+   Стили для секций категорий товаров (.product-category) - НЕЗНАЧИТЕЛЬНЫЕ ИЗМЕНЕНИЯ
+   ==================================== */
+.product-category {
+    margin-bottom: 50px; /* Увеличен отступ снизу для секций основных категорий, чтобы отделить их от подкатегорий */
+}
+
+.product-category h2 {
+    font-size: 2em;     /* Увеличен размер шрифта заголовков основных категорий, чтобы сделать их более заметными */
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Разделительная линия под заголовком категории */
+    padding-bottom: 10px;
+}
+
+.product-category .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Выравнивание товаров в начале строки */
+    gap: 20px;
+}
+
+
+/* ====================================
+   НОВЫЕ СТИЛИ ДЛЯ СЕКЦИЙ ПОДКАТЕГОРИЙ (.subcategory)
+   ==================================== */
+.subcategory {
+    margin-bottom: 40px; /* Отступ снизу для секций подкатегорий - ОСТАВЛЯЕМ */
+}
+
+.subcategory h3 {
+    font-size: 1.6em;     /* Размер шрифта для заголовков подкатегорий - УВЕЛИЧЕН, чтобы лучше выделялись */
+    margin-bottom: 15px;  /* Отступ снизу для заголовков подкатегорий - ОСТАВЛЯЕМ */
+    margin-top: 30px;     /* Добавлен отступ сверху для заголовков подкатегорий, чтобы отделить их от предыдущей подкатегории/основной категории */
+    color: #555;         /* Цвет заголовков подкатегорий - ОСТАВЛЯЕМ */
+    border-bottom: 1px solid #eee; /* Тонкая линия-разделитель под заголовками подкатегорий - ОСТАВЛЯЕМ */
+    padding-bottom: 5px;   /* Отступ снизу для разделительной линии - ОСТАВЛЯЕМ */
+}
+
+
+.subcategory .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Выравнивание товаров в начале строки - ОСТАВЛЯЕМ */
+    gap: 20px;               /* Расстояние между товарами в подкатегории - ОСТАВЛЯЕМ */
+}
+
+
+/* ====================================
+   Стили для секции "Все товары" (.product-grid) - если используется - БЕЗ ИЗМЕНЕНИЙ
+   ==================================== */
+.product-grid {
+    margin-bottom: 40px;
+}
+
+.product-grid h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.product-grid .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+/* ====================================
+   Карточки товаров (общие стили для карточек каталога и главной страницы) - НЕЗНАЧИТЕЛЬНЫЕ ИЗМЕНЕНИЯ
+   ==================================== */
+.catalog-page .product-card {
+    width: 260px; /* Уменьшена ширина карточки товара в каталоге еще немного, чтобы лучше помещались в подкатегориях */
+}
+
+/* Можно добавить дополнительные стили для карточек товаров в каталоге,
+   если они должны отличаться от карточек на главной странице */

@@ -1,0 +1,13 @@
+@import url('base/reset.css');
+@import url('base/variables.css');
+
+/* Компоненты (общие блоки сайта) */
+@import url('components/header.css');
+@import url('components/buttons.css');
+@import url('components/footer.css');
+
+/* Стили страниц (специфичные для каждой страницы) */
+@import url('pages/home.css');
+@import url('pages/catalog.css');
+@import url('pages/about.css');
+@import url('pages/contact.css');

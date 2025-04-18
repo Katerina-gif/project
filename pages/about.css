@@ -1,0 +1,275 @@
+/* css/pages/about.css - Стили для страницы "О нас" (about.html) */
+
+/* ====================================
+   Общие стили для страницы "О нас" (.about-page)
+   ==================================== */
+   .about-page {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.container .about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+
+/* ====================================
+   Стили для баннера страницы "О нас" (.about-banner)
+   ==================================== */
+.about-banner {
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative; /* Для позиционирования заголовка поверх изображения */
+}
+
+.about-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0.9; /* Небольшая прозрачность для баннера "О нас" */
+}
+
+.about-banner h1 {
+    position: absolute; /* Позиционируем заголовок поверх баннера */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование заголовка */
+    font-size: 3em;
+    color: #fff; /* Белый цвет текста заголовка */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста заголовка */
+}
+
+
+/* ====================================
+   Стили для секции "Наша история" (.our-story)
+   ==================================== */
+.our-story {
+    margin-bottom: 60px;
+}
+
+.our-story h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.our-story .story-content {
+    display: flex;          /* Flexbox для расположения изображения и текста рядом */
+    align-items: center;     /* Выравнивание по вертикали по центру */
+    gap: 40px;             /* Расстояние между изображением и текстом */
+}
+
+.our-story .story-content img {
+    max-width: 45%;         /* Изображение занимает 45% ширины контейнера */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.our-story .story-content p {
+    flex: 1;              /* Текст занимает оставшееся пространство */
+    line-height: 1.7;
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+/* ====================================
+   Стили для секции "Наши ценности" (.our-values)
+   ==================================== */
+.our-values {
+    margin-bottom: 60px;
+}
+
+.our-values h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.our-values .values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;          /* Flexbox для колонок ценностей */
+    flex-wrap: wrap;        /* Перенос колонок на новую строку при необходимости */
+    justify-content: center; /* Выравнивание колонок по центру */
+    gap: 30px;             /* Расстояние между колонками */
+}
+
+.our-values .values-list li {
+    flex-basis: 45%;      /* Каждая колонка занимает 45% ширины (на средних экранах - две колонки в ряд) */
+    min-width: 300px;     /* Минимальная ширина колонки */
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;     /* Выравнивание содержимого колонки по центру */
+}
+
+.our-values .values-list li i.value-icon {
+    display: block;         /* Иконка как блочный элемент */
+    font-size: 2.5em;      /* Размер иконки (нужно будет добавить иконочный шрифт или SVG) */
+    margin-bottom: 15px;
+    color: #ffcc00;        /* Пример акцентного цвета для иконок */
+}
+
+.our-values .values-list li h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.our-values .values-list li p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* ====================================
+   Стили для секции "Почему выбирают 'Солнышко'?" (.why-choose-us)
+   ==================================== */
+.why-choose-us {
+    margin-bottom: 60px;
+}
+
+.why-choose-us h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.why-choose-us .reasons-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;          /* Flexbox для колонок преимуществ */
+    flex-wrap: wrap;        /* Перенос колонок на новую строку при необходимости */
+    justify-content: center; /* Выравнивание колонок по центру */
+    gap: 30px;             /* Расстояние между колонками */
+}
+
+.why-choose-us .reasons-list li {
+    flex-basis: 28%;      /* Каждая колонка занимает 28% ширины (на средних экранах - три колонки в ряд) */
+    min-width: 280px;     /* Минимальная ширина колонки */
+    padding: 25px;
+    background-color: #f8f8f8; /* Светло-серый фон для колонок преимуществ */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;     /* Выравнивание содержимого колонки по центру */
+}
+
+.why-choose-us .reasons-list li i.reason-icon {
+    display: block;         /* Иконка как блочный элемент */
+    font-size: 2em;        /* Размер иконки (нужно будет добавить иконочный шрифт или SVG) */
+    margin-bottom: 15px;
+    color: #007bff;        /* Пример акцентного цвета для иконок */
+}
+
+.why-choose-us .reasons-list li h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.why-choose-us .reasons-list li p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* ====================================
+   Стили для секции "Наша команда" (.our-team) - ОПЦИОНАЛЬНО
+   ==================================== */
+.our-team {
+    margin-bottom: 60px;
+    text-align: center;     /* Выравнивание секции "Наша команда" по центру */
+}
+
+.our-team h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.our-team .team-members {
+    display: flex;          /* Flexbox для карточек членов команды */
+    flex-wrap: wrap;        /* Перенос карточек на новую строку при необходимости */
+    justify-content: center; /* Выравнивание карточек по центру */
+    gap: 30px;             /* Расстояние между карточками */
+}
+
+.our-team .team-member {
+    width: 280px;          /* Ширина карточки члена команды */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;       /* Обрезать содержимое, выходящее за границы borderRadius */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-align: center;     /* Выравнивание содержимого карточки по центру */
+}
+
+.our-team .team-member img {
+    display: block;         /* Изображение как блочный элемент */
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Скругление верхних углов изображения */
+}
+
+.our-team .team-member h3 {
+    font-size: 1.4em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.our-team .team-member .team-position {
+    font-style: italic;    /* Курсив для должности */
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.our-team .team-member p {
+    padding: 0 20px 20px 20px; /* Внутренние отступы для описания члена команды */
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* ====================================
+   Стили для секции "Приглашение к действию" (.call-to-action)
+   ==================================== */
+.call-to-action {
+    text-align: center;     /* Выравнивание по центру */
+    padding: 50px 0;
+    background-color: #f0f0f0; /* Светло-серый фон для секции CTA */
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.call-to-action h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.call-to-action .button {
+    /* Используем общие стили кнопок из components/buttons.css */
+    /* Можно добавить дополнительные стили, если кнопка CTA должна отличаться */
+    font-size: 1.2em; /* Увеличенный размер шрифта для кнопки CTA */
+    padding: 15px 35px; /* Увеличенные внутренние отступы для кнопки CTA */
+}
